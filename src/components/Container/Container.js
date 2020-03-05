@@ -5,7 +5,6 @@ import styled from "styled-components";
 const MainDivStyled = styled.div`
 background-color: red;
 `
-const Container = ()=>{
 const Container = (props)=>{
     console.log("debug1",props)
     return(
@@ -16,6 +15,6 @@ const Container = (props)=>{
     <p>Description: {props.explanation}</p>
         </MainDivStyled>
     )
-}}
+}
 
 export default Container;

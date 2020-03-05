@@ -8,7 +8,6 @@ color: red;
 const Header = () =>{
     return(
         <div>
-            <h1>Here is the Nasa Photo of the Day</h1>
             <HeaderStyle>Here is the Nasa Photo of the Day</HeaderStyle>
         </div>
     )
