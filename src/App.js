@@ -8,8 +8,8 @@ function App() {
   const [photoData, setPhotoData] = useState("")
   useEffect(()=> {
     axios
-    .get(`https://api.nasa.gov/planetary/apod?api_key=pXRAICUDdPDAkGlYXxbE4dbDJZ8KVmUxfH0dQtUK`)
-    .then(response =>{
+    .get('https://api.nasa.gov/planetary/apod?api_key=pXRAICUDdPDAkGlYXxbE4dbDJZ8KVmUxfH0dQtUK')
+    .then(response => {
       console.log (response);
         setPhotoData(response.data) 
     })
