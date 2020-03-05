@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import Container from "./components/Container";
-import Header from "./components/Header";
+import Container from "./components/Container/Container";
+import Header from "./components/Header/Header";
 
 function App() {
   const [photoData, setPhotoData] = useState("")

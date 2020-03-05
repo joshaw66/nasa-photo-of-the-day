@@ -16,6 +16,6 @@ const Container = (props)=>{
     <p>Description: {props.explanation}</p>
         </MainDivStyled>
     )
-}
+}}
 
 export default Container;
