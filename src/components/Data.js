@@ -7,7 +7,7 @@ function Data() {
 let [Data, setData] = useState([])
 useEffect(() => {
   axios
-    .get("https://api.nasa.gov/planetary/apod")
+    .get("https://api.nasa.gov/planetary/apod?api_key=Ee9dNMn1hDshsByF3BRreZyMfgdQJvO9hbsie6lt")
     .then(response => {
       console.log(response.data);
       setData(response.data);
