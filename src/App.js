@@ -1,15 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import axios from "axios";
+import Container from "./components/Container/Container";
+import Header from "./components/Header/Header";
 
 function App() {
+  const [photoData, setPhotoData] = useState("")
+  useEffect(()=> {
+    axios
+    .get('https://api.nasa.gov/planetary/apod?api_key=pXRAICUDdPDAkGlYXxbE4dbDJZ8KVmUxfH0dQtUK')
+    .then(response => {
+      console.log (response);
+        setPhotoData(response.data) 
+    })
+  .catch(error =>{
+    console.log("Sorry, no picture today", error);
+  });
+  }, []);
+  
   return (
+    
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <Header />
+      <Container explanation={photoData.explanation} title={photoData.title} image ={photoData.image} date={photoData.date}/>
     </div>
   );
 }
 
 export default App;
+ 
