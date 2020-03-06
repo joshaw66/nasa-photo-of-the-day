@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import "./Header.css";
 import styled from "styled-components";
 
 const HeaderStyle = styled.h1`
-color: red;
+color: aqua;
 `;
 const Header = () =>{
     return(

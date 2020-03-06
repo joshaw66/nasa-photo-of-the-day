@@ -5,14 +5,13 @@ import Container from "./components/Container/Container";
 import Header from "./components/Header/Header";
 
 function App() {
-  const [photo, setPhoto] = useState([])
+  const [photo, setPhoto] = useState({})
 
   useEffect(()=> {
     axios
     .get('https://api.nasa.gov/planetary/apod?api_key=pXRAICUDdPDAkGlYXxbE4dbDJZ8KVmUxfH0dQtUK')
     .then(response => {
-      console.log (response.data)
-        setPhoto(response.data)
+        setPhoto(response.data);
     })
     .catch(error => {
     console.log("Sorry, no picture today", error);
@@ -26,7 +25,7 @@ function App() {
       <Container 
       explanation={photo.explanation} 
       title={photo.title} 
-      image ={photo.image} 
+      image ={photo.url} 
       date={photo.date}
       />
     </div>
