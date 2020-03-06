@@ -9,7 +9,7 @@ function Container (props) {
     return(
         <MainDivStyled>
             <h1>Title: {props.title}</h1>
-            <img src={props.url} alt= '' />
+            <img src={props.image} alt= '' />
             <p>Description: {props.explanation}</p>
         </MainDivStyled>
     )

@@ -11,6 +11,7 @@ function App() {
     axios
     .get('https://api.nasa.gov/planetary/apod?api_key=pXRAICUDdPDAkGlYXxbE4dbDJZ8KVmUxfH0dQtUK')
     .then(response => {
+      console.log("hi",response);
         setPhoto(response.data);
     })
     .catch(error => {
