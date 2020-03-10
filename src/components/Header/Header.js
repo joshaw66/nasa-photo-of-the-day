@@ -7,6 +7,7 @@ color: white;
 padding: 4%;
 text-shadow: 4px 4px black;
 font-size: 4rem;
+background-color: red;
 `;
 const Header = () =>{
     return(

@@ -4,11 +4,11 @@ import styled from "styled-components";
 
 const MainDivStyled = styled.div`
 background-color: lightgrey;
-border: solid darkgrey;
+border: solid grey;
 padding: 2%;
 `
 const TitleH1 = styled.div`
-color: white; 
+color: lightgrey; 
 font-size: 2rem;
 padding-bottom: 2%;
 padding-top: 2%;
@@ -25,7 +25,7 @@ padding: 4%;`
 function Container (props) {
     return(
         <MainDivStyled>
-            <TitleH1>Title: {props.title}</TitleH1>
+            <TitleH1>Daily Photo: {props.title}</TitleH1>
             <img src={props.image} alt= '' />
             <PageStyle>Description: {props.explanation}</PageStyle>
         </MainDivStyled>
