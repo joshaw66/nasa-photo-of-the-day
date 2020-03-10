@@ -3,16 +3,31 @@ import "./Container.css";
 import styled from "styled-components";
 
 const MainDivStyled = styled.div`
-background-color: red;
+background-color: lightgrey;
+border: solid grey;
+padding: 2%;
 `
-const Container = (props)=>{
-    console.log("debug1",props)
+const TitleH1 = styled.div`
+color: lightgrey; 
+font-size: 2rem;
+padding-bottom: 2%;
+padding-top: 2%;
+background-color: gray;
+font-family: helvetica;`
+
+const PageStyle = styled.div`
+color: black;
+font-size: 1.5rem;
+padding: 4%;`
+
+
+
+function Container (props) {
     return(
-    
         <MainDivStyled>
-            <h1>Title: {props.title}</h1>
-            <img src={props.image} alt={props.title}/>
-    <p>Description: {props.explanation}</p>
+            <TitleH1>Daily Photo: {props.title}</TitleH1>
+            <img src={props.image} alt= '' />
+            <PageStyle>Description: {props.explanation}</PageStyle>
         </MainDivStyled>
     )
 }
